@@ -35,3 +35,11 @@ $ cd ./analyze_data/
 $ source config.sh
 $ bash make_directories.sh
 ```
+
+## Troubleshooting
+If you experience dropped frames at the beginning or end of your video, there are several parameters that might be causing the issue. Each of these should be checked to make sure they are right for your video and PC. 
+
+1. `fps` : Frames will be dropped when the tracker processing speed is slower than the video frame rate. `fps` should be set in `/track_videos/make_launch_files.py` to be slow enough to not throw ROS warnings in your shell, but fast enough for reasonable analysis speed. This `fps` variable does not have to reflect the actual fps of the video. It is used to determine how fast the video stream is published to the ROS image topic. 
+2. `buffer_queue_size` should be set in `/track_videos/make_launch_files.py` to be reasonably large, depending on your video size. 
+3. `ROS_KILL_TIMER` in `/track_videos/config.sh` sets the amount of time allowed to analyze each video before moving onto the next. 
+4. `ROS_INITIALIZE_TIMER` in `/track_videos/config.sh` sets the amount of time allowed for the ROS tracker to initialize before the video stream begins. 
