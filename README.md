@@ -43,3 +43,5 @@ If you experience dropped frames at the beginning or end of your video, there ar
 2. `buffer_queue_size` should be set in `/track_videos/make_launch_files.py` to be reasonably large, depending on your video size. 
 3. `ROS_KILL_TIMER` in `/track_videos/config.sh` sets the amount of time allowed to analyze each video before moving onto the next. 
 4. `ROS_INITIALIZE_TIMER` in `/track_videos/config.sh` sets the amount of time allowed for the ROS tracker to initialize before the video stream begins. 
+
+*Note:* The `/track_videos/launch_videos.sh` script routinely kills all ROS nodes as part of its cleanup loop. If you'd like to run other ROS processes concurrently, this file should be edited to exclude the nodes you would like to keep.

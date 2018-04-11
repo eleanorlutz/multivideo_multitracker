@@ -6,6 +6,9 @@ do
 	id="${fname##*/}" # includes extension
 	id="${id%.*}"
 
+	# clean up any lingering processes 
+	rosnode kill -a
+
 	# run the launcher from inside the /src directory
 	cd $DESTINATION/$id/src
 	# remove pyc files to force recompiling with new parameters
