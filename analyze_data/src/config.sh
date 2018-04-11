@@ -7,4 +7,4 @@ export VIDEO_SRC="$HOME/Documents/videos_test/"
 export DESTINATION="$HOME/Documents/gcamp_analysis_files_temp/"
 
 # Configuration source file for data analysis and video tracker editing
-export CONFIG_SRC="$HOME/Documents/gitrepos/multivideo_multitracker/analyze_data/src"
+export CONFIG_SRC="$HOME/Documents/gitrepos/multitracker_larva_parameters/data_analysis"
