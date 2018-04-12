@@ -8,6 +8,9 @@ do
 
 	# clean up any lingering processes 
 	rosnode kill -a
+	killall -w roscore
+	killall -w rosnode
+	killall -w rosmaster
 
 	# run the launcher from inside the /src directory
 	cd $DESTINATION/$id/src
@@ -29,6 +32,9 @@ do
 	)
 
 	rosnode kill -a
+	killall -w roscore
+	killall -w rosnode
+	killall -w rosmaster
 	echo "Finished with video ID $id"
 done
 
