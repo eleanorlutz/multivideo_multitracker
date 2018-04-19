@@ -7,10 +7,12 @@ do
 	id="${id%.*}"
 
 	# clean up any lingering processes 
+	# if this isn't included there will be a large memory leak
 	rosnode kill -a
 	killall -w roscore
 	killall -w rosnode
 	killall -w rosmaster
+	killall -w roslaunch
 
 	# run the launcher from inside the /src directory
 	cd $DESTINATION/$id/src
@@ -35,6 +37,7 @@ do
 	killall -w roscore
 	killall -w rosnode
 	killall -w rosmaster
+	killall -w roslaunch
 	echo "Finished with video ID $id"
 done
 

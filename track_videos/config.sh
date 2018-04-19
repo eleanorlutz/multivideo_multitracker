@@ -13,10 +13,10 @@ export PARAMETERS_SRC="$HOME/Documents/gitrepos/multivideo_multitracker/src/"
 export LAUNCH_FILES_SRC="$HOME/Documents/launch_files/"
 
 # Maximum time allowed to analyze a video before process is killed
-export ROS_KILL_TIMER="12m"
+export ROS_KILL_TIMER="4m"
 
 # Maximum time allowed for tracker to initialize before starting video
-export ROS_INITIALIZE_TIMER="2m"
+export ROS_INITIALIZE_TIMER="10s"
 
 # Remove all previous data analysis files if true
 RM_PREVIOUS=$true
