@@ -36,6 +36,12 @@ $ source config.sh
 $ bash make_directories.sh
 ```
 
+## Post-processing
+Because Multitracker is intended for real-time video tracking, it will not register objects until they begin to move. In some videos, animals do not start to move until several seconds into the experiment. 
+
+The Jupyter notebook in the `postprocess_data` folder identifies all analyzed videos with less than the expected number of frames. These videos can then be checked manually to confirm lack of movement in the initial frames. Once the video is reviewed, the Jupyter Notebook also automatically propagates
+the tracker's position when the larva was first detected to the beginning of the movie. 
+
 ## Troubleshooting
 If you experience dropped frames at the beginning or end of your video, there are several parameters that might be causing the issue. Each of these should be checked to make sure they are right for your video and PC. 
 
