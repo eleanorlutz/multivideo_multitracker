@@ -15,7 +15,7 @@ Python and Bash scripts to automate [multi_tracker](https://github.com/florisvb/
 
 This is what the process should look like: 
 ```shell
-$ cd ./track_videos/
+$ cd ~/Documents/multivideo_multitracker/track_videos/
 $ source config.sh
 $ bash make_directories.sh
 $ python make_launch_files.py
@@ -31,7 +31,7 @@ After loading each video manually and editing the trajectories as needed, run th
 3. Run `make_directories.sh` to copy the parent configuration file into each video folder (and rename it so that the data-time stamp matches the prefix of the hdf5 file). 
 
 ```shell
-$ cd ./analyze_data/
+$ cd ~/Documents/multivideo_multitracker/analyze_data/
 $ source config.sh
 $ bash make_directories.sh
 ```
