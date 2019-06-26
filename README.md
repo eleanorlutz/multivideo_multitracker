@@ -36,6 +36,17 @@ $ source config.sh
 $ bash make_directories.sh
 ```
 
+## Manually editing video trajectories
+To view and verify the animal trajectories calculated by Multitracker, open each video, one at a time, using the Multitracker trajectory viewer. To do this, first navigate to the folder containing the code: 
+```bash
+cd ~/catkin_ws/src/multi_tracker/multi_tracker_analysis
+```
+Next, use this command to run the trajectory viewer: 
+```bash
+python trajectory_viewer_gui_v2.py --path=
+```
+Right after the `--path=` text, drag and drop the data folder from the video you want to analyze. This should be located in `Documents/analysis_files_temp/(videoname)/data`. This should open a GUI (graphical user interface) that you can use to join, add, or remove trajectories. 
+
 ## Post-processing
 Because Multitracker is intended for real-time video tracking, it will not register objects until they begin to move. In some videos, animals do not start to move until several seconds into the experiment. 
 
